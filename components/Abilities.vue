@@ -3,7 +3,7 @@
         <div class="flex justify-between" v-for="ability in Object.keys(character.abilities)">
             <div>
                 <div v-if="ability == 'FOR'" class="text-[0.5rem]">Carac.</div>
-                <div class="box bg-black text-white w-[50px]">
+                <div class="boxPrimary w-[50px]">
                     {{ ability }}
                 </div>
             </div>
@@ -15,8 +15,9 @@
             </div>
             <div>
                 <div v-if="ability == 'FOR'" class="text-[0.5rem]">Total</div>
-                <div class="box">
-                    {{ character.abilitiesModifiers[ability] }}
+                <div class="box font-bold text-primary">
+                    {{ character.abilitiesModifiers[ability] > 0 ? `+${character.abilitiesModifiers[ability]}` :
+                        character.abilitiesModifiers[ability] }}
                 </div>
             </div>
 

@@ -1,11 +1,12 @@
 <template>
     <div class="w-full flex flex-col justify-between">
         <div v-for="skill in character.skills" class="flex items-end w-full justify-between">
-            <div class="w-[200px] box bg-black text-white">
+            <div class="w-[200px] boxPrimary">
                 {{ skill.name }}
             </div>
             <div>
-                <Box :label="skill.name == 'Acrobaties' ? 'Total' : ''" :value="1"></Box>
+                <Box :label="skill.name == 'Acrobaties' ? 'Total' : ''"
+                    :value="character.abilitiesModifiers[skill.ability] + getProficiencyBonus(skill.proficiency) + skill.bonus" />
             </div>
             <span>
                 =
@@ -27,5 +28,5 @@
 </template>
 
 <script lang="ts" setup>
-import { character } from "../character";
+import { character, getProficiencyBonus } from "../character";
 </script>

@@ -1,13 +1,13 @@
 <template>
     <div class="flex flex-col justify-between">
-        <div class="flex w-full items-end space-x-10">
+        <div class="flex w-full items-end space-x-2">
             <Box label="PV" />
-            <span>
+            <span class="text-primary font-bold text-xl">
                 / {{ character.health }}
             </span>
         </div>
-        <div class="flex my-2 items-end gap-2">
-            <div class="box bg-black text-white px-2">
+        <div class="flex items-end gap-2">
+            <div class="boxPrimary px-2">
                 {{ character.CA.armor }}
             </div>
             <Box label="Bonus CA" :value="character.CA.CABonus" />
@@ -21,9 +21,9 @@
         </div>
         <div class="flex flex-col gap-1">
             <div v-for="save in character.saves" class="flex justify-between items-end w-full">
-                <span class="box bg-black text-white w-[80px]">{{ save.name }}</span>
+                <span class="boxPrimary w-[80px]">{{ save.name }}</span>
                 <Box :label="save.name == 'Réflexe' ? 'Total' : ''"
-                    :value="character.abilitiesModifiers[save.ability] + getProficiencyBonus(save.proficiency)" />
+                    :value="character.abilitiesModifiers[save.ability] + getProficiencyBonus(save.proficiency) + save.bonus" />
                 =
                 <BoxProficiency :hideLabel="save.name != 'Réflexe'" :proficiency="save.proficiency" />
                 +

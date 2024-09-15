@@ -4,17 +4,17 @@
       <img src="./public/pathfinder_logo.png" class="flex h-10 rounded-md" />
       <Infos />
     </div> -->
-    <div class="col-span-3 row-span-3 flex flex-col justify-around">
+    <div class="col-span-3 row-span-3 flex flex-col justify-between">
       <img src="./public/pathfinder_logo.png" />
-      <Abilities class="bg-red-200 row-span-3 col-span-3" />
+      <Abilities class="bg-red-20 row-span-3 col-span-3" />
     </div>
-    <Defense class="bg-green-200 row-span-3 col-span-6" />
+    <Defense class="bg-green-20 row-span-3 col-span-6" />
     <div class="col-span-3 row-span-3 flex flex-col justify-between">
       <span class="text-center text-4xl text-red-800 font-mono">{{ character.name }}</span>
       <img src="./public/monk3.webp" class="rounded-md" />
     </div>
-    <Attacks class="bg-blue-200 row-span-1 col-span-9" />
-    <Skills class="bg-purple-200 row-span-8 col-span-8" />
+    <Attacks class="bg-blue-20 row-span-1 col-span-12" />
+    <Skills class="bg-purple-20 row-span-8 col-span-8" />
   </div>
 </template>
 

@@ -4,94 +4,95 @@ type attack = {
     dices: string,
     damageBonus: number,
     attackBonus: number,
-    proficiency: "Q" | "E" | "M" | "L",
+    proficiency: "I" | "Q" | "E" | "M" | "L",
     traits: string[]
 }
 
 export const character = {
-    name: "Louis",
+    name: "Flinch",
     ancestry: "Humain",
+    background: "Barbier",
     class: "Moine",
     level: 9,
-    health: 110,
+    health: 116,
     languages: "commun.",
     abilities: {
-        FOR: 10,
-        DEX: 10,
-        CON: 10,
+        FOR: 14,
+        DEX: 19,
+        CON: 14,
         SAG: 10,
         INT: 10,
-        CHA: 10
+        CHA: 18
     } as {
         [key: string]: number
     },
     abilitiesModifiers: {
-        FOR: 0,
-        DEX: 2,
-        CON: 0,
+        FOR: 2,
+        DEX: 4,
+        CON: 2,
         SAG: 0,
         INT: 0,
-        CHA: 0
+        CHA: 4
     } as {
         [key: string]: number
     },
     CA: {
-        armor: "Robe de moine",
+        armor: "Vêtements d'aventurier +1",
         CABonus: 0,
         maxDex: 4,
-        proficiency: "Q",
-        bonus: 0,
+        proficiency: "E",
+        bonus: 1,
     },
-    speed: 9,
+    speed: 12,
     saves: {
         reflex: {
             name: "Réflexe",
-            proficiency: "Q",
+            proficiency: "E",
             ability: "DEX",
-            bonus: 0,
+            bonus: 1,
         },
         fortitude: {
             name: "Vigueur",
-            proficiency: "Q",
-            ability: "DEX",
-            bonus: 0,
+            proficiency: "E",
+            ability: "CON",
+            bonus: 1,
         },
         will: {
             name: "Volonté",
-            proficiency: "Q",
-            ability: "DEX",
-            bonus: 0,
+            proficiency: "M",
+            ability: "SAG",
+            bonus: 1,
         }
     },
     attacks: [
         {
             name: "Bandelletes de coup puissants +1",
-            ability: "FOR",
-            dices: "1d6",
+            ability: "DEX",
+            dices: "2d8 + 1d6 + 4",
             damageBonus: 0,
-            attackBonus: 0,
-            proficiency: "Q",
-            traits: ["Main nues", "Argent", "Magique"]
+            attackBonus: 1,
+            proficiency: "E",
+            traits: ["Agile", "Finesse", "Traître", "Magique", "Sonique", "Fer froid/argent"]
         },
     ] as attack[],
     skills: {
         acrobatie: {
             name: "Acrobaties",
             ability: "DEX",
-            bonus: 0,
+            bonus: 1,
             proficiency: "Q",
         },
         arcanes: {
             name: "Arcanes",
             ability: "INT",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         artisanat: {
             name: "Artisanat",
             ability: "INT",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         athletisme: {
             name: "Athletisme",
@@ -99,29 +100,23 @@ export const character = {
             bonus: 0,
             proficiency: "Q",
         },
-        conn_minieres: {
-            name: "Conn. minières",
-            ability: "INT",
-            bonus: 0,
-            proficiency: "Q",
-        },
         diplomatie: {
             name: "Diplomatie",
             ability: "CHA",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         discretion: {
             name: "Discrétion",
             ability: "DEX",
-            bonus: 0,
+            bonus: 1,
             proficiency: "Q",
         },
         duperie: {
             name: "Duperie",
             ability: "CHA",
-            bonus: 0,
-            proficiency: "Q",
+            bonus: 2,
+            proficiency: "M",
         },
         intimidation: {
             name: "Intimidation",
@@ -129,29 +124,35 @@ export const character = {
             bonus: 0,
             proficiency: "Q",
         },
+        conn_chirurgie: {
+            name: "Conn. chirurgie",
+            ability: "INT",
+            bonus: 0,
+            proficiency: "Q",
+        },
         medecine: {
             name: "Médecine",
             ability: "SAG",
-            bonus: 0,
-            proficiency: "Q",
+            bonus: 1,
+            proficiency: "E",
         },
         nature: {
             name: "Nature",
             ability: "SAG",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         occultisme: {
             name: "Occultisme",
             ability: "INT",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         perception: {
             name: "Perception",
             ability: "SAG",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "E",
         },
         religion: {
             name: "Religion",
@@ -163,25 +164,25 @@ export const character = {
             name: "Représentation",
             ability: "CHA",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         societe: {
             name: "Société",
             ability: "INT",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         survie: {
             name: "Survie",
             ability: "SAG",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "I",
         },
         vol: {
             name: "Vol",
             ability: "DEX",
             bonus: 0,
-            proficiency: "Q",
+            proficiency: "E",
         },
     },
 }
