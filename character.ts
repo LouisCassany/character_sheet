@@ -16,6 +16,8 @@ export const character = {
     level: 9,
     health: 116,
     languages: "commun.",
+    size: "M",
+    alignement: "CN",
     abilities: {
         FOR: 14,
         DEX: 19,
