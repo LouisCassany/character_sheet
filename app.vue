@@ -1,5 +1,5 @@
 <template>
-  <div class="page pageBg p-[1rem] grid grid-cols-12 grid-rows-12 gap-6">
+  <div class="page p-[1rem] grid grid-cols-12 grid-rows-12 gap-6">
     <!-- <div class="col-span-2 row-span-3 bg-blue-200">
       <img src="./public/pathfinder_logo.png" class="flex h-10 rounded-md" />
       <Infos />
@@ -16,18 +16,19 @@
     <Attacks class="bg-blue-20 row-span-1 col-span-12" />
     <Skills class="bg-purple-20 row-span-8 col-span-8" />
   </div>
+  <div class="page2">
+    <div v-for="index in 200">
+      {{ index }}
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { character } from "./character";
 </script>
 
-<style>
-.pageBg {
-  background-image: url("./background.jpg");
-  background-repeat: repeat;
-}
 
+<style>
 /* document */
 @media screen {
 
@@ -38,11 +39,21 @@ import { character } from "./character";
     padding-bottom: 2cm;
   }
 
+  .page2 {
+    width: 21cm;
+    box-shadow: 0 0 1cm rgba(0, 0, 0, 0.1);
+    margin: 1cm auto;
+    background-image: url("./background.jpg");
+    background-repeat: repeat;
+  }
+
   .page {
     width: 21cm;
     height: 29.7cm;
     box-shadow: 0 0 1cm rgba(0, 0, 0, 0.1);
     margin: 1cm auto;
+    background-image: url("./background.jpg");
+    background-repeat: repeat;
   }
 }
 
@@ -56,6 +67,8 @@ import { character } from "./character";
   html,
   body {
     height: 100%;
+    background-image: url("./background.jpg");
+    background-repeat: repeat;
   }
 
   main {
