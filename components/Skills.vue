@@ -6,7 +6,7 @@
             </div>
             <div>
                 <Box :label="skill.name == 'Acrobaties' ? 'Total' : ''"
-                    :value="character.abilitiesModifiers[skill.ability] + getProficiencyBonus(skill.proficiency) + skill.bonus" />
+                    :value="getAbilityModifier(skill.ability) + getProficiencyBonus(skill.proficiency) + skill.bonus" />
             </div>
             <span>
                 =
@@ -15,8 +15,8 @@
                 {{ skill.ability }}
             </span>
             <div>
-                <Box :label="skill.name == 'Acrobaties' ? 'Carac.' : ''"
-                    :value="character.abilitiesModifiers[skill.ability]"></Box>
+                <Box :label="skill.name == 'Acrobaties' ? 'Carac.' : ''" :value="getAbilityModifier(skill.ability)">
+                </Box>
             </div>
             <BoxProficiency :hideLabel="skill.name != 'Acrobaties'" :proficiency="skill.proficiency" />
             <span>
@@ -28,5 +28,5 @@
 </template>
 
 <script lang="ts" setup>
-import { character, getProficiencyBonus } from "../character";
+import { character, getAbilityModifier, getProficiencyBonus } from "../character";
 </script>

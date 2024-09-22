@@ -4,7 +4,7 @@
             <div class="flex items-end gap-1">
                 <span class="boxPrimary p-3">{{ attack.name }}</span>
                 <Box label="Total" :value="getAttackBonus(attack)" /> =
-                <Box label="Carac." :value="character.abilitiesModifiers[attack.ability]" /> +
+                <Box label="Carac." :value="getAbilityModifier(attack.ability)" /> +
                 <BoxProficiency :proficiency="attack.proficiency" /> +
                 <Box label="Bonus" :value="attack.attackBonus" />
                 <span class="rounded-full whitespace-nowrap px-2 ml-6 bg-primary text-white">
@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts" setup>
-import { character, getProficiencyBonus } from "../character";
+import { character, getAbilityModifier, getProficiencyBonus } from "../character";
 
 function getAttackBonus(attack: any) {
-    return attack.attackBonus + character.abilitiesModifiers[attack.ability] + getProficiencyBonus(attack.proficiency)
+    return attack.attackBonus + getAbilityModifier(attack.ability) + getProficiencyBonus(attack.proficiency)
 }
 </script>

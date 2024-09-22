@@ -23,12 +23,11 @@
             <div v-for="save in character.saves" class="flex justify-between items-end w-full">
                 <span class="boxPrimary w-[80px]">{{ save.name }}</span>
                 <Box :label="save.name == 'Réflexe' ? 'Total' : ''"
-                    :value="character.abilitiesModifiers[save.ability] + getProficiencyBonus(save.proficiency) + save.bonus" />
+                    :value="getAbilityModifier(save.ability) + getProficiencyBonus(save.proficiency) + save.bonus" />
                 =
                 <BoxProficiency :hideLabel="save.name != 'Réflexe'" :proficiency="save.proficiency" />
                 +
-                <Box :label="save.name == 'Réflexe' ? 'Carac' : ''"
-                    :value="character.abilitiesModifiers[save.ability]" />
+                <Box :label="save.name == 'Réflexe' ? 'Carac' : ''" :value="getAbilityModifier(save.ability)" />
                 +
                 <Box :label="save.name == 'Réflexe' ? 'Divers' : ''" :value="save.bonus" />
             </div>
@@ -38,9 +37,9 @@
 </template>
 
 <script setup lang="ts">
-import { character, getProficiencyBonus } from "../character";
+import { character, getAbilityModifier, getProficiencyBonus } from "../character";
 
 const CA = computed(() => {
-    return 10 + character.CA.CABonus + character.CA.maxDex + getProficiencyBonus(character.CA.proficiency) + character.CA.bonus
+    return 10 + character.value.CA.CABonus + character.value.CA.maxDex + getProficiencyBonus(character.value.CA.proficiency) + character.value.CA.bonus
 })
 </script>

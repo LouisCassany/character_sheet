@@ -1,14 +1,57 @@
-type attack = {
-    name: string,
-    ability: "FOR" | "DEX" | "CON" | "SAG" | "INT" | "CHA",
-    dices: string,
-    damageBonus: number,
-    attackBonus: number,
-    proficiency: "I" | "Q" | "E" | "M" | "L",
-    traits: string[]
+export const proficiency = ["I", "Q", "E", "M", "L"] as const;
+export type Proficiency = typeof proficiency[number];
+export const ability = ["FOR", "DEX", "CON", "SAG", "INT", "CHA"] as const;
+export type Ability = typeof ability[number];
+
+type Character = {
+    name: string
+    ancestry: string
+    background: string
+    class: string
+    level: number
+    health: number
+    languages: string
+    size: string
+    alignement: string
+    speed: number
+    abilities: {
+        [key in Ability]: number
+    }
+    CA: {
+        armor: string
+        CABonus: number
+        maxDex: number
+        proficiency: Proficiency
+        bonus: number
+    },
+    saves: {
+        [key: string]: {
+            name: string
+            proficiency: Proficiency
+            ability: Ability
+            bonus: number
+        }
+    },
+    attacks: {
+        name: string,
+        ability: "FOR" | "DEX" | "CON" | "SAG" | "INT" | "CHA",
+        dices: string,
+        damageBonus: number,
+        attackBonus: number,
+        proficiency: "I" | "Q" | "E" | "M" | "L",
+        traits: string[]
+    }[],
+    skills: {
+        [key: string]: {
+            name: string
+            ability: Ability
+            bonus: number
+            proficiency: Proficiency
+        }
+    }
 }
 
-export const character = {
+export const character = ref<Character>({
     name: "Flinch",
     ancestry: "Humain",
     background: "Barbier",
@@ -18,6 +61,7 @@ export const character = {
     languages: "commun.",
     size: "M",
     alignement: "CN",
+    speed: 12,
     abilities: {
         FOR: 14,
         DEX: 19,
@@ -25,18 +69,6 @@ export const character = {
         SAG: 10,
         INT: 10,
         CHA: 18
-    } as {
-        [key: string]: number
-    },
-    abilitiesModifiers: {
-        FOR: 2,
-        DEX: 4,
-        CON: 2,
-        SAG: 0,
-        INT: 0,
-        CHA: 4
-    } as {
-        [key: string]: number
     },
     CA: {
         armor: "Vêtements d'aventurier +1",
@@ -45,7 +77,6 @@ export const character = {
         proficiency: "E",
         bonus: 1,
     },
-    speed: 12,
     saves: {
         reflex: {
             name: "Réflexe",
@@ -76,7 +107,7 @@ export const character = {
             proficiency: "E",
             traits: ["Agile", "Finesse", "Traître", "Magique", "Sonique", "Fer froid/argent"]
         },
-    ] as attack[],
+    ],
     skills: {
         acrobatie: {
             name: "Acrobaties",
@@ -187,18 +218,22 @@ export const character = {
             proficiency: "E",
         },
     },
+})
+
+export function getAbilityModifier(ability: Ability) {
+    return Math.floor((character.value.abilities[ability] - 10) / 2)
 }
 
-export function getProficiencyBonus(prof: string) {
+export function getProficiencyBonus(prof: Proficiency) {
     switch (prof) {
         case "Q":
-            return 2 + character.level
+            return 2 + character.value.level
         case "E":
-            return 4 + character.level
+            return 4 + character.value.level
         case "M":
-            return 6 + character.level
+            return 6 + character.value.level
         case "L":
-            return 8 + character.level
+            return 8 + character.value.level
         default:
             return 0
     }
