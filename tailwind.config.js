@@ -8,13 +8,16 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#660e0e",
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#660e0e",
+        },
       },
-    },
+    ],
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }
 
