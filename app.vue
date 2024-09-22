@@ -16,7 +16,8 @@
     <Infos class="bg-pink-20 row-span-8 col-span-4" />
   </div> -->
   <div class="page2 min-h-48">
-    <CustomSelect :options="options" />
+    <CustomSelect :options="options" @add="add" />
+    <div v-for="option in selection" v-html="option.description" />
   </div>
 </template>
 
@@ -24,7 +25,7 @@
 import { character } from "./character";
 import { data } from "./data/data";
 
-const selection = ref([])
+const selection = ref<any[]>([])
 
 const options = Object.keys(data).map((key) => {
   return {
@@ -33,5 +34,9 @@ const options = Object.keys(data).map((key) => {
     description: data[key as keyof typeof data].descFR,
   }
 })
+
+function add(option: any) {
+  selection.value.push(option)
+}
 
 </script>
