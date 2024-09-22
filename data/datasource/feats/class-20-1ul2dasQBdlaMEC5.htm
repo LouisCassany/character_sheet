@@ -1,0 +1,31 @@
+Name: Heart of the Kaiju
+Nom: Coeur de kaiju
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>Witnessing the might of the kaiju King Mogaru, Alru, and Toraloa up close awoke a new ferocity within you. When you transform using @UUID[Compendium.pf2e.feats-srd.Item.54JzsYCx3uoj7Wlz]{Monstrosity Shape}, you can take on a kaiju form. When you take this feat, choose acid, cold, electricity, fire, or sonic damage; this is the damage your breath weapon deals. You can't change this later. The battle form is Gargantuan size with the following specific abilities; the damage values already include the extra die from being a 9th-rank spell.</p>
+<p><strong>Kaiju</strong> Speed 40 feet; physical resistance 5;</p>
+<p><strong>Melee</strong> <span class="action-glyph">1</span> jaws (reach 20 feet), <strong>Damage</strong> 3d12+20 piercing;</p>
+<p><strong>Melee</strong> <span class="action-glyph">1</span> claws (agile, reach 20 feet), <strong>Damage</strong> 3d8+20 slashing;</p>
+<p><strong>Breath Weapon</strong> <span class="action-glyph">2</span> (evocation, primal) Each creature in a @Template[cone|distance:60] takes @Damage[15d6[@item.flags.pf2e.rulesSelections.damageType]] damage (of your chosen damage type), with a basic @Check[reflex|against:spell|basic] save against your spell DC. Once activated, your breath weapon can't be used again for [[/r 1d4 #Recharge Breath Weapon]]{1d4 rounds}.</p>
+-- Desc (fr) --
+<p>Le fait d'avoir été témoin de près de la puissance du roi kaiju Mogaru, d'Alru et de Toraloa a éveillé une nouvelle férocité en vous. Lorsque vous vous transformez en utilisant @UUID[Compendium.pf2e.feats-srd.Item.54JzsYCx3uoj7Wlz]{Morphologie monstrueuse}, vous pouvez prendre la forme d'un kaiju. Lorsque vous prenez ce don, choisissez des dégâts d'acide, d'électricité, de feu, de froid ou de son. Ce sont les dégâts que votre arme de souffle inflige. Vous ne pourrez plus modifier ce choix par la suite. La forme de combat est de taille gigantesque avec les capacités spécifiques suivantes. Les valeurs de dégâts incluent déjà le dé supplémentaire dû au fait qu'il s'agit d'un sort de rang 9.</p>
+<ul>
+<li><strong>Kaiju</strong> 
+<ul>
+<li>Vitesse 12 mètres</li>
+<li>résistance 5 dégâts physiques</li>
+<li><strong>Corps-à-corps</strong> <span class="action-glyph">1</span> Mâchoires (portée 6 mètres), <strong>Dégâts</strong> @Damage[(3d12+20)[piercing]]{3d12+20 perforants} </li>
+<li><strong>Corps-à-corps</strong> <span class="action-glyph">1</span>Griffes (agile, allonge 6 mètres), <strong>Dégâts</strong> @Damage[(3d8+20)[slashing]]{3d8+20 tranchants}</li>
+<li><strong>Arme de souffle</strong> <span class="action-glyph">2</span> (primordiale) Chaque créature dans un @Template[cone|distance:60]{cône de 18 mètres} subit @Damage[15d6[@item.flags.pf2e.rulesSelections.damageType]]{15d6 dégâts} (du type de dégâts que vous avez choisi), avec un jet de @Check[reflex|dc:resolve(@actor.attributes.spellDC.value)|basic] contre votre DD de sort. Une fois activée, votre arme de souffle ne peut plus être utilisée pendant [[/br 1d4 #Recharge arme de souffle]]{1d4 rounds}.</li>
+</ul>
+</li>
+</ul>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: Monstrosity Shape
+PrereqFR: Morphologie monstrueuse
+-------------------------------------------------------------------------------

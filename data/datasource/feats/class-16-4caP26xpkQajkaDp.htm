@@ -1,0 +1,29 @@
+Name: One-Millimeter Punch
+Nom: Coup à infime distance
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>Your punches have incredible force and control. When you damage a target using One-Inch Punch, you can focus your qi to send the foe flying. If you do, the target must attempt a @Check[fortitude|against:monk] save against your class DC.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>
+<p><strong>Success</strong> The target is pushed back 5 feet.</p>
+<p><strong>Failure</strong> The target is pushed back 10 feet.</p>
+<p><strong>Critical Failure</strong> The target is pushed back 10 feet for each action you spent on One-Inch Punch.</p>
+-- Desc (fr) --
+<p>Vos coups de poings ont une force et un contrôle incroyable. Lorsque vous infligez des dégâts à une cible en utilisant Coup à courte distance, vous pouvez concentrer votre ki pour l'envoyer voler. Si vous le faites, la cible doit tenter un jet de @Check[fortitude|dc:resolve(@actor.classDCs.monk.dc.value)] contre votre DD de classe.</p>
+<hr />
+<p><strong>Succès critique</strong> La cible n'est pas affectée.</p>
+<p><strong>Succès</strong> La cible est repoussée d'1,50 m.</p>
+<p><strong>Échec</strong> La cible est repoussée de 3 m.</p>
+<p><strong>Échec critique</strong> La cible est repoussée de 3 m pour chaque action que vous avez dépensée pour le Coup à courte distance.</p>
+-- End desc ---
+
+----- Fields ------------------------------------------------------------------
+rules.0.textEN: {item|system.description.value}
+rules.0.textFR: {item|system.description.value}
+-------------------------------------------------------------------------------
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: One-Inch Punch
+PrereqFR: Coup à courte distance
+-------------------------------------------------------------------------------

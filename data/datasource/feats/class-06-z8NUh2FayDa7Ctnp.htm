@@ -1,0 +1,27 @@
+Name: Vengeful Spirit Deck
+Nom: Jeu de l'esprit vengeur
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p><strong>Requirements</strong> You have an active harrow omen.</p>
+<hr />
+<p>You manifest a ghostly deck of harrow cards. Draw a card from a harrow deck, then select a target within 60 feet. The card flies through the air to strike at that target, inflicting 4d6 damage, with a @Check[reflex|against:class-spell|basic] saving throw against your class DC or spell DC. The type of damage inflicted is determined by your active harrow omen; if the card drawn is in the same suit as your active harrow omen, the target takes a –2 status penalty to its saving throw. The damage increases to 6d6 if you're 10th level and 8d6 if you're 15th level. You can continue to throw cards at targets on your turn as long as you Sustain the Vengeful Spirit Deck—throwing a card takes two actions. This effect lasts as long as you Sustain it, up to 1 minute, or until you no longer have an active harrow omen. Once the effect ends, you lose your active harrow omen.</p>
+<p><strong>Hammers:</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[cold]]</p>
+<p><strong>Keys:</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[fire]]</p>
+<p><strong>Shields:</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[poison]]</p>
+<p><strong>Books:</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[electricity]]</p>
+<p><strong>Stars:</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[mental]]</p>
+<p><strong>Crowns:</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[acid]]</p>
+-- Desc (fr) --
+<p><strong>Conditions</strong> Vous avez un présage de Tourment actif.</p>
+<hr />
+<p>Vous faites apparaître un jeu fantomatique de cartes du Tourment. Tirez une carte d'un jeu du Tourment, puis choisissez une cible dans les 18 mètres. la carte vole à travers les airs pour Frapper cette cible, lui infligeant 4d6 dégâts, avec un jet de @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|basic] contre votre DD de classe. Le type de dégâts infligé est déterminé par votre présage de Tourment. Si la carte tirée est de la même couleur que votre présage de Tourment actif, la cible subit une pénalité de statut de -2 à son jet de sauvegarde. Les dégâts passent à 6d6 si vous êtes au moins de niveau 10 et de 8d6 si vous êtes au moins de niveau 15. Vous pouvez continuer pour tirer des cartes sur les cibles lors de votre tour tant que vous Maintenez le jeu de l'esprit vengeur — lancer une carte prend deux actions. Cet effet dure tant que vous le Maintenez, jusqu'à 1 minute ou jusqu'à ce que vous n'ayez plus de présage du Tourment actif. Une fois que l'effet se termine, vous perdez votre présage de Tourment actif.</p>
+<p><strong>Marteaux</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[cold]]{4d6 dégâts de froid}</p>
+<p><strong>Clés</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[fire]]{4d6 dégâts de feu}</p>
+<p><strong>Boucliers</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[poison]]{4d6 dégâts de poison}</p>
+<p><strong>Livres</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[electricity]]{4d6 dégâts d'électricité}</p>
+<p><strong>Étoiles</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[mental]]{4d6 dégâts mentaux}</p>
+<p><strong>Couronnes</strong> @Damage[(ternary(gte(@actor.level,15),8,ternary(gte(@actor.level,10),6,4)))d6[acid]]{4d6 dégâts d'acide}</p>
+-- End desc ---

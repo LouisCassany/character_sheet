@@ -1,0 +1,20 @@
+Name: Elemental Explosion
+Nom: Explosion élémentaire
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p><strong>Requirements</strong> You're raging, and you haven't used this ability since you last Raged.</p>
+<hr />
+<p>You unleash the energy roiling within you, exploding elemental matter in a @Template[emanation|distance:15]. Each creature in the area takes @Damage[(@actor.level)d8|traits:area-damage]{1d8 damage per level you possess}, with the same type you chose for elemental rage. Each creature in the area must attempt a @Check[reflex|against:class|basic]. Elemental Explosion gains the trait of your element.</p>
+-- Desc (fr) --
+<p><strong>Conditions</strong> Vous êtes en rage et vous n'avez pas utilisé cette capacité depuis la dernière fois que vous avez été en rage.</p>
+<hr />
+<p>Vous libérez l'énergie qui bouillonne en vous, faisant exploser la matière élémentaire dans une @Template[emanation|distance:15]{émanation de 4,50 mètres}. Chaque créature dans la zone subit @Damage[(@actor.level)d8|traits:area-damage]{1d8 dégâts par niveau} que vous possédez, du même type que celui que vous avez choisi pour votre rage élémentaire. Chaque créature dans la zone doit tenter un jet de @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|basic]. Explosion élémentaire obtient le trait de votre élément.</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: elemental instinct
+PrereqFR: instinct élémentaire
+-------------------------------------------------------------------------------

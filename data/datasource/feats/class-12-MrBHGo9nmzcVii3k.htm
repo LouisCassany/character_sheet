@@ -1,0 +1,22 @@
+Name: Desiccating Inhalation
+Nom: Inhalation desséchante
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p><strong>Frequency</strong> once per hour</p>
+<hr />
+<p>You draw in the moisture from nearby creatures, draining them dry to heal your wounds. Creatures in a @Template[cone|distance:30] take @Damage[floor(@actor.level/2)d8[void]] damage, with a @Check[reflex|against:class|basic] save against your class DC. A creature that critically fails this saving throw is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. As long as at least one creature was damaged by your Desiccating Inhalation, you regain [[/r @actor.level[healing]]]{HP equal to your level}.</p>
+<p>At 14th level and every 2 levels thereafter, the damage increases by 1d8.</p>
+-- Desc (fr) --
+<p><strong>Fréquence</strong> Une fois par heure</p>
+<hr />
+<p>Vous aspirez l'humidité des créatures proches, les mettant à sec pour soigner vos blessures. Les créatures dans un @Template[cone|distance:30]{cône de 9 mètres} subissent @Damage[floor(@actor.level/2)d8[void]]{6d8 dégâts de vide}, avec un jet de @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|basic] contre votre DD de classe. Une créature qui obtient un échec critique à ce jet de sauvegarde est aussi @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drainée 1}. Tant qu'au moins une créature a été blessée par votre Inhalation desséchante, vous regagnez des [[/r @actor.level[healing]]]{Points de vie} égaux à votre niveau.</p>
+<p>Au niveau 14 et tous les 2 niveaux par la suite, les dégâts augmentent de 1d8.</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: Mummy Dedication
+PrereqFR: Dévouement : Momie
+-------------------------------------------------------------------------------

@@ -1,0 +1,24 @@
+Name: Self Destruct
+Nom: Auto destruction
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p><strong>Trigger</strong> Your reanimated clockwork companion is reduced to 0 Hit Points.</p>
+<p><strong>Requirements</strong> You're within 60 feet of your reanimated clockwork companion.</p>
+<hr />
+<p>You've installed a self-destruct device within your construct companion, which you can trigger with a special device from up to 60 feet away. When you activate the device, your reanimated construct companion explodes, dealing @Damage[2d6[fire]] damage per level to all creatures in a @Template[emanation|distance:30]{30-foot radius}. Creatures caught in the blast can attempt a @Check[reflex|against:class-spell] save, with a DC equal to the higher of your class DC or spell DC.</p>
+<p>[[/r ((2*@actor.level)d6)[fire]]]{Leveled Fire Damage}</p>
+-- Desc (fr) --
+<p><strong>Déclencheur</strong> Votre compagnon mécanique réanimé est réduit à 0 Point de vie.</p>
+<p><strong>Conditions</strong> Vous êtes dans les 18 m de votre compagnon mécanique réanimé.</p>
+<hr />
+<p>Vous avez installé un engin autodestructeur au sein de votre compagnon mécanique, que vous pouvez déclencher avec un engin spécial dans un rayon de 18 mètres lorsque vous activez la charge. Lorsque vous activez l'engin, votre compagnon créature artificielle réanimé explose, infligeant @Damage[2d6[fire]]{2d6 dégâts de feu} par niveau à toutes les créatures dans une @Template[emanation|distance:30]{émanation de 9 mètres}. Les créatures prises au sein de l'explosion peuvent tenter un jet de @Check[reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)] contre un DD égal au plus élevé entre votre DD de classe ou de sort.</p>
+<p>[[/r ((2*@actor.level)d6)[fire]]]{Dégâts de feu selon le niveau}</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: Clockwork Reanimator Dedication
+PrereqFR: Dévouement : Réanimateur nécromécanicien
+-------------------------------------------------------------------------------

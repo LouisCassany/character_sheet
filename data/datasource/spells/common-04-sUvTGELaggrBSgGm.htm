@@ -1,0 +1,34 @@
+Name: Implement of Destruction
+Nom: Outil de destruction
+État: libre
+
+-- Desc (en) --
+<p>You solemnly declare that the target weapon will bring death to a foe, implanting an irrational fear of the weapon into the target enemy. This link echoes at the forefront of the enemy's mind, forming a looming sense of omnipresent dread. The effect is based on the target enemy's Will save.</p>
+<hr />
+<p><strong>Critical Success</strong> The target enemy is unaffected.</p>
+<p><strong>Success</strong> The target weapon deals an additional @Damage[2d6[mental]] damage the first time it hits the target enemy before the end of the spell's duration.</p>
+<p><strong>Failure</strong> The target weapon deals an additional @Damage[2d6[persistent,mental]] damage to the target enemy. If the enemy is critically hit by the weapon, the enemy is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} for as long as it takes this persistent mental damage.</p>
+<p><strong>Critical Failure</strong> The target weapon deals an additional @Damage[4d6[persistent,mental]] damage to the target enemy. If the enemy is critically hit by the weapon, the enemy is doomed 1.</p>
+<hr />
+<p><strong>Heightened (+2)</strong> Increase the mental damage by 1d6 on a success, and increase the persistent mental damage by 1d6 on a failure or by 2d6 on a critical failure.</p>
+-- Desc (fr) --
+<p>Vous déclarez solennellement que l'arme cible apportera la mort à un ennemi, en implantant une peur irrationnelle de l'arme chez la cible ennemie. Ce lien fait écho aux préoccupations de l'esprit de l'ennemi, lui conférant un sentiment d'effroi omniprésent. L'effet est fonction du jet de Volonté de l'ennemi ciblé.</p>
+<hr />
+<p><strong>Succès critique</strong> L'ennemi cible n'est pas affecté.</p>
+<p><strong>Succès</strong> L'arme ciblée inflige @Damage[2d6[mental]]{2d6 dégâts mentaux} supplémentaires la première fois qu'elle touche la cible ennemie avant la fin de la durée du sort.</p>
+<p><strong>Échec</strong> L'arme cible inflige @Damage[2d6[persistent,mental]]{2d6 dégâts mentaux persistants} supplémentaires à la cible ennemie. Si l'ennemi est l'objet d'un coup critique par l'arme, l'ennemi est @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Condamné 1} tant qu'il subit les dégâts mentaux persistants.</p>
+<p><strong>Échec critique</strong> L'arme cible inflige @Damage[4d6[persistent,mental]]{4d6 dégâts mentaux persistants} supplémentaires à la cible ennemie. Si l'ennemi est touché de manière critique par l'arme, l'ennemi est Condamné 1.</p>
+<hr />
+<p><strong>Intensifié (+2)</strong> Augmentez les dégâts mentaux de 1d6 en cas de succès et augmentez les dégâts mentaux persistants de 1d6 en cas d'échec ou de 2d6 sur un échec critique.</p>
+-- End desc ---
+
+----- Fields ------------------------------------------------------------------
+DurationEN: 1 minute
+DurationFR: 1 minute
+RangeEN: 30 feet
+RangeFR: 9 mètres
+TargetEN: 1 enemy, and 1 weapon that is either unattended or wielded by you or a willing ally
+TargetFR: 1 ennemi et une arme qui est soit non tenue, soit maniée par vous ou un allié consentant
+TimeEN: 2
+TimeFR: 2
+-------------------------------------------------------------------------------

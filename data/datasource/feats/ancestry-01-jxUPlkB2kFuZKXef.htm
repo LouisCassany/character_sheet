@@ -1,0 +1,29 @@
+Name: Lesser Enhance Venom
+Nom: Amélioration du venin inférieure
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>Your venom grows deadlier and more plentiful. You upgrade the vishkanyan venom you can apply with @UUID[Compendium.pf2e.actionspf2e.Item.s4V7JWSMF9JPJAeX]{Envenom} to lesser vishkanyan venom. Envenom's frequency becomes once per hour.</p>
+<p><strong>Lesser Vishkanyan Venom (level 1)</strong></p>
+<p><strong>Saving Throw</strong> @Check[fortitude|against:class-spell|traits:poison]</p>
+<p><strong>Maximum Duration</strong> 6 rounds</p>
+<p><strong>Stage 1</strong> @Damage[1d6[poison]] damage (1 round)</p>
+<p><strong>Stage 2</strong> @Damage[1d6[poison]] damage (1 round)</p>
+<p><strong>Stage 3</strong> @Damage[2d6[poison]] damage (1 round)</p>
+-- Desc (fr) --
+<p>Votre venin devient plus mortel et plus abondant. Vous améliorez le venin vishkanyen que vous pouvez appliquer avec @UUID[Compendium.pf2e.actionspf2e.Item.s4V7JWSMF9JPJAeX]{Envenimer} pour le transformer en venin vishkanyen inférieur. La fréquence d'Envenimer passe à une fois par heure.</p>
+<hr />
+<p><strong>Venin vishkanyen inférieur</strong> (niveau 1)</p>
+<p><strong>Jet de sauvegarde</strong> @Check[fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:poison] égal au plus élevé entre votre DD de classe ou de sort</p>
+<p><strong>Durée maximale</strong> 6 rounds</p>
+<p><strong>Stade 1</strong> @Damage[1d6[poison]]{1d6 dégâts de poison} (1 round)</p>
+<p><strong>Stade 2</strong> @Damage[1d6[poison]]{1d6 dégâts de poison} (1 round)</p>
+<p><strong>Stade 3</strong> @Damage[1d6[poison]]{2d6 dégâts de poison} (1 round)</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: Envenom
+PrereqFR: Envenimer
+-------------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+Name: Horizon Thunder Sphere
+Nom: Sphère de tonnerre lointain
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>You gather magical energy into your palm, forming a concentrated ball of electricity that crackles and rumbles like impossibly distant thunder. Make a ranged spell attack roll against your target's AC. On a success, you deal 3d6 electricity damage. On a critical success, the target takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round. The number of actions you spend when Casting this Spell determines the range and other parameters.</p>
+<p><span class="action-glyph">2</span> This spell has a range of 30 feet.</p>
+<p><span class="action-glyph">3</span> This spell has a range of 60 feet and deals half damage on a failure (but not a critical failure) as the electricity lashes out and jolts the target.</p>
+<p><strong>Two Rounds</strong> If you spend 3 actions Casting the Spell, you can avoid finishing the spell and spend another 3 actions on your next turn to empower the spell even further. If you do, after attacking the target, whether you hit or miss, the ball of lightning explodes, dealing @Damage[(@item.rank*2)d6[electricity]] damage to all other creatures in a @Template[emanation|distance:10] around the target (basic Reflex save). Additionally, you spark with electricity for 1 minute, dealing @Damage[(@item.rank)[electricity]] damage to creatures that Grab you or that hit you with an unarmed Strike or a non-reach melee weapon.</p>
+<hr />
+<p><strong>Heightened (+1)</strong> The initial damage on a hit, as well as the burst damage for two-round casting time, each increase by 2d6, and the damage creatures take if they Grapple or hit you while you're in your sparking state increases by 1.</p>
+-- Desc (fr) --
+<p>Vous rassemblez l'énergie magique dans votre paume, formant une boule concentrée d'électricité qui crépite et gronde comme un tonnerre très lointain. Faites un jet d'attaque de sort à distance contre la CA de votre cible. En cas de succès, vous infligez 3d6 dégâts d'électricité. En cas de succès critique, la cible subit le double des dégâts et est @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Éblouie} pendant 1 round. Le nombre d'actions que vous dépensez lorsque vous lancez ce sort détermine la portée et les autres paramètres.</p>
+<p><span class="action-glyph">2</span> Ce sort a une portée de de 9 mètres.</p>
+<p><span class="action-glyph">3</span> Ce sort a une portée de 18 mètres et inflige la moitié des dégâts en cas d'échec (mais pas en cas d'échec critique) lorsque l'électricité jaillit et secoue la cible.</p>
+<p><strong>Deux rounds</strong> Si vous passez 3 actions à Lancer le sort, vous pouvez éviter de le finir pour passer 3 autres actions de votre prochain tour pour renforcer le sort encore davantage. Si vous le faites, après avoir attaqué la cible, que vous la touchiez ou la manquiez, la boule de foudre explose, infligeant @Damage[(@item.rank*2)d6[electricity]]{2d6 dégâts d'électricité} à toutes les créatures dans une @Template[emanation|distance:10]{émanation de 3 mètres} autour de la cible (jet de Réflexes basique). De plus, vous produisez des crépitements électriques pendant 1 minute, infligeant @Damage[(@item.rank)[electricity]]{1 dégât d'électricité} aux créatures qui vous Agrippent ou qui vous frappent avec une frappe à mains nues ou une arme au corps-à-corps dépourvue d'allonge.</p>
+<hr />
+<p><strong>Intensifié (+1)</strong> Les dégâts du coup initial ainsi que les dégâts d'explosion pour le sort avec un temps d'incantation de deux rounds, augmentent chacun de 2d6 dégâts d'électricité et les dégâts que les créatures subissent si elles vous agrippent ou vous frappent pendant que vous crépitez augmentent de 1 dégât d'électricité.</p>
+-- End desc ---
+
+----- Fields ------------------------------------------------------------------
+RangeEN: varies
+RangeFR: variable
+TargetEN: 1 creature
+TargetFR: 1 créature
+TimeEN: 2 to 2 rounds
+TimeFR: 2 à 2 rounds
+-------------------------------------------------------------------------------

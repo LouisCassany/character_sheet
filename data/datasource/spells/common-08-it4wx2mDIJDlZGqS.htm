@@ -1,0 +1,31 @@
+Name: Divine Armageddon
+Nom: Armaggedon divin
+État: libre
+
+-- Desc (en) --
+<p>You call forth a divine cataclysm from your deity, destroying living and undead creatures in the area alike. Creatures in the area take 10d6 void damage and 10d6 alignment damage (good, evil, lawful, or chaotic), chosen from among the alignments your deity has. If your deity is true neutral, increase the void damage by 4d6 instead of dealing alignment damage. A creature harmed by vitality damage, such as one with void healing, takes vitality damage instead of void damage from this spell.</p>
+<p>You can't cast this spell if you don't have a deity. This spell gains the trait corresponding to the alignment damage dealt.</p>
+<hr />
+<p><strong>Heightened (+1)</strong> The damage increases by 1d6 void damage, 1d6 alignment damage, and 1d6 additional void and vitality damage for a true neutral deity.</p>
+<hr />
+<p>@Damage[(@item.level+2)d6[void],(@item.level+2)d6[spirit]|traits:spirit]{Leveled Void + Spirit Damage}</p>
+<p>@Damage[(@item.level+2)d6[vitality],(@item.level+2)d6[spirit]|traits:spirit]{Leveled Vitality + Spirit Damage}</p>
+<hr />
+<p>@Damage[((@item.level*2)-2)d6[void]]{Leveled Void Damage}</p>
+<p>@Damage[((@item.level*2)-2)d6[vitality]]{Leveled Vitality Damage}</p>
+-- Desc (fr) --
+<p>Vous invoquez un cataclysme divin de votre divinité, détruisant les créatures vivantes et mortes-vivantes de la zone de la même façon. Les créatures de la zone subissent 10d6 dégâts de vide et 10d6 dégâts spirituels. Si votre divinité est neutre, augmentez les dégâts de vide de 4d6 dégâts de vide au lieu d'infliger des dégâts spirituels. Une créature blessée par des dégâts de vitalité, comme une créature dotée de Guérison du vide, subit des dégâts de vitalité au lieu des dégâts de vide de ce sort.</p>
+<p>Vous ne pouvez pas lancer ce sort si vous n'avez pas de divinité. Ce sort obtient le trait correspondant aux type de dégâts infligés.</p>
+<hr />
+<p><strong>Intensifié (+1)</strong> Les dégâts augmentent d'1d6 dégâts de vide, 1d6 dégâts spirituels et 1d6 dégâts de vide et dégâts de vitalité supplémentaires pour une divinité neutre.</p>
+<hr />
+<p>@Damage[(@item.level+2)d6[void],(@item.level+2)d6[spirit]|traits:spirit]{Dégâts de vide + spirituels par niveau}</p>
+@Damage[(@item.level+2)d6[vitality],(@item.level+2)d6[spirit]|traits:spirit]{Dégâts de vitalité + spirituels par niveau}</p>
+-- End desc ---
+
+----- Fields ------------------------------------------------------------------
+RangeEN: 120 feet
+RangeFR: 36 mètres
+TimeEN: 2
+TimeFR: 2
+-------------------------------------------------------------------------------

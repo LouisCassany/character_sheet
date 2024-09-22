@@ -1,0 +1,21 @@
+Name: Dragon's Rage Breath
+Nom: Souffle de rage du dragon
+État: changé
+Changés: desc
+État d'origine: officielle
+
+-- Desc (en) --
+<p><strong>Frequency</strong> once per 10 minutes</p>
+<p>You breathe deeply and exhale powerful energy in a @Template[cone|distance:30], dealing @Damage[(@actor.level)d6[@actor.flags.pf2e.barbarian.instinct.dragon.damageType]|traits:area-damage] damage to each creature in the area with a @Check[reflex|against:barbarian|basic] save against your class DC. The damage type matches your instinct's dragon breath, and this action gains the trait of your dragon instinct's tradition.</p>
+-- Desc (fr) --
+<p><strong>Conditions</strong> Vous n'avez pas utilisé ce pouvoir depuis votre dernière Rage</p>
+<hr />
+<p>Vous prenez une grande inspiration et soufflez une puissante vague d'énergie dans un @Template[cone|distance:30]{cône de 9 mètres} ou sur une @Template[line|distance:60]{ligne de 18 mètres}, qui inflige @Damage[(@actor.level)d6[@actor.flags.pf2e.barbarian.instinct.dragon.damageType]|traits:area-damage]{1d6 dégâts par niveau}. Les types de zone d'effet et de dégâts correspondent à ceux de votre dragon (voir la @UUID[Compendium.pf2e.classfeatures.Item.VDot7CDcXElxmkkz]{table})</p>
+<p>Si vous avez utilisé ce pouvoir au cours de la dernière heure, la zone d'effet et la quantité de dégâts sont divisées par deux ( un cône de 4,50 mètres ou une @Template[line|distance:30]{ligne de 9 mètres} ; @Damage[(floor(@actor.level/2))d6[@actor.flags.pf2e.barbarian.instinct.dragon.damageType]|traits:area-damage]{1d6 dégâts pour toutes les tranches de 2 niveaux}).</p>
+<p>Chaque créature qui se trouve dans la zone d'effet doit faire un jet de @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|basic].</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: dragon instinct
+PrereqFR: Instinct du dragon
+-------------------------------------------------------------------------------
