@@ -17,14 +17,7 @@
   </div> -->
   <div class="page2 min-h-48">
     <CustomSelect :options="options" @add="add" />
-    <div v-for="option in selection" class="p-4">
-      <div class="w-full flex justify-between">
-        <h2 class="text-2xl font-bold text-primary">{{ option.name }}</h2>
-        <Remove class="text-primary h-8 w-8 bg-primary bg-opacity-30 rounded-full cursor-pointer hover:bg-opacity-20"
-          @click="remove(option)"></Remove>
-      </div>
-      <div v-html="option.description" />
-    </div>
+    <Data v-for="data of selection" :data="data" @remove="remove" />
   </div>
 </template>
 
