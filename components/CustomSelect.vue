@@ -2,7 +2,8 @@
     <div class="w-1/2 mx-auto">
         <div class="dropdown dropdown-bottom w-full">
             <input tabindex="0" role="button" type="text" placeholder="Rechercher un don, un sort etc."
-                class="input input-bordered input-primary w-full outline-none bg-transparent" v-model="query" />
+                class="input input-bordered input-primary w-full outline-none bg-transparent !cursor-text"
+                v-model="query" />
             <div v-if="results.length > 0" tabindex="0"
                 class="dropdown-content menu bg-base-100 rounded-box z-[1] w-full p-4 shadow border border-primary">
                 <template v-for="(result, index) of results">

@@ -15,9 +15,19 @@
     <Skills class="bg-purple-20 row-span-8 col-span-8" />
     <Infos class="bg-pink-20 row-span-8 col-span-4" />
   </div> -->
-  <div class="page2 min-h-48">
-    <CustomSelect :options="options" @add="add" />
-    <Data v-for="data of selection" :data="data" @remove="remove" />
+  <div class="page2 min-h-48 p-8">
+    <CustomSelect :options="options" @add="add" class="noPrint mb-4" />
+    <div class="columns-2 gap-8">
+      <div v-for="option in selection" :key="option.name" class="mb-4 break-inside-avoid">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold text-primary">{{ option.name }}</h2>
+          <Remove class="bg-opacity-15 bg-primary size-6 rounded-full text-primary cursor-pointer noPrint"
+            @click="remove(option)" />
+        </div>
+        <hr class="bg-primary h-[2px] w-full my-2 " />
+        <div v-html="option.description" />
+      </div>
+    </div>
   </div>
 </template>
 

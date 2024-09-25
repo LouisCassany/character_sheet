@@ -35,7 +35,7 @@ for (const category of filenames) {
         }
         const descriptionRegex =
             /[-]{2,} Desc \(en\) [-]{2,}([\s\S]*?)[-]{2,} Desc \(fr\) [-]{2,}([\s\S]*?)[-]{2,} End desc [-]{2,}/gm;
-        const patterns = [/@Damage\[[^{]+{([^}]+)}/gm, /@UUID\[[^\]]+\]{([^}]+)/gm, /@[Cc]heck\[(\w+)[^\]]+\]/gm, /@Template\[[^\]]+\]{([^}]+)}/gm]
+        const patterns = [/@Damage\[[^{]+{([^}]+)}/gm, /@UUID\[[^\]]+\]{([^}]+)}/gm, /@[Cc]heck\[(\w+)[^\]]+\]/gm, /@Template\[[^\]]+\]{([^}]+)}/gm]
         const match = descriptionRegex.exec(dataFR);
         if (match) {
 
@@ -70,7 +70,7 @@ function replaceWithLastCapture(patterns, text) {
     patterns.forEach(regex => {
         text = text.replace(regex, (...matches) => {
             const captureGroups = matches.slice(1, -2)
-            return captureGroups[1] ? `<b>${captureGroups[1]}</b>` : `<b>${captureGroups[0]}</b>`;
+            return captureGroups[1] ? `<b>${captureGroups[1].toLowerCase()}</b>` : `<b>${captureGroups[0].toLowerCase()}</b>`;
         });
     });
     return text
