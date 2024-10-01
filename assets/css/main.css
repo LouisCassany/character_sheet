@@ -61,7 +61,7 @@
     break-inside: avoid;
   }
 
-  #printButton {
+  .noPrint {
     display: none;
   }
 }

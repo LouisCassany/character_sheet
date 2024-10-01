@@ -16,8 +16,10 @@
     <Infos class="bg-pink-20 row-span-8 col-span-4" />
   </div> -->
   <div class="page2 min-h-48">
-    <CustomSelect :options="options" @add="add" />
-    <Data v-for="data of selection" :data="data" @remove="remove" />
+    <CustomSelect :options="options" @add="add" class="noPrint" />
+    <div class="grid grid-cols-2">
+      <Data v-for="data of selection" :data="data" @remove="remove" />
+    </div>
   </div>
 </template>
 
@@ -30,8 +32,8 @@ const selection = ref<any[]>([])
 const options = Object.keys(data).map((key) => {
   return {
     name: data[key as keyof typeof data].Nom,
-    category: data[key as keyof typeof data].category,
     description: data[key as keyof typeof data].descFR,
+    ...data[key as keyof typeof data]
   }
 })
 

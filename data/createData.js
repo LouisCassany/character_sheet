@@ -35,7 +35,7 @@ for (const category of filenames) {
         }
         const descriptionRegex =
             /[-]{2,} Desc \(en\) [-]{2,}([\s\S]*?)[-]{2,} Desc \(fr\) [-]{2,}([\s\S]*?)[-]{2,} End desc [-]{2,}/gm;
-        const patterns = [/@Damage\[[^{]+{([^}]+)}/gm, /@UUID\[[^\]]+\]{([^}]+)/gm, /@[Cc]heck\[(\w+)[^\]]+\]/gm, /@Template\[[^\]]+\]{([^}]+)}/gm]
+        const patterns = [/@Damage\[[^{]+{([^}]+)}/gm, /@UUID\[[^\]]+\]{([^}]+)}/gm, /@[Cc]heck\[(\w+)[^\]]+\]/gm, /@Template\[[^\]]+\]{([^}]+)}/gm]
         const match = descriptionRegex.exec(dataFR);
         if (match) {
 
