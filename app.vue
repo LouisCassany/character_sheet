@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { character } from "./character";
-import { data } from "./data/data";
+import { data } from "./public/data/data";
 
 const selection = ref<any[]>([])
 

@@ -23,7 +23,7 @@
     width: 21cm;
     box-shadow: 0 0 1cm rgba(0, 0, 0, 0.1);
     margin: 1cm auto;
-    background-image: url("./background.jpg");
+    background-image: url("/background.jpg");
     background-repeat: repeat;
   }
 
@@ -32,7 +32,7 @@
     height: 29.7cm;
     box-shadow: 0 0 1cm rgba(0, 0, 0, 0.1);
     margin: 1cm auto;
-    background-image: url("./background.jpg");
+    background-image: url("/background.jpg");
     background-repeat: repeat;
   }
 }
@@ -45,7 +45,7 @@
   html,
   body {
     height: 100%;
-    background-image: url("./background.jpg");
+    background-image: url("/background.jpg");
     background-repeat: repeat;
   }
 
