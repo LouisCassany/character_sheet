@@ -1,0 +1,20 @@
+Name: Spirit's Anguish
+Nom: Angoisse spirituelle
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p><strong>Cost</strong> 1 spirit wisp or spirit remnant from your spirit dwelling</p>
+<p><strong>Requirements</strong> You are holding your spirit dwelling.</p><hr /><p>You purify a spirit by coaxing it to release its anguish in a final cathartic howl. This deals sonic damage to all creatures in a @Template[cone|distance:30], with a @Check[will|against:class-spell|basic] save against your class DC or spell DC, whichever is higher. If you expend a spirit wisp, this deals @Damage[(@actor.level)d4[sonic]|traits:area-damage]. If you expend a spirit remnant, this deals 1d6 sonic damage per level of the incorporeal undead or haunt from which you gained the remnant.</p>
+-- Desc (fr) --
+<p><strong>Coût</strong> 1 volute spirituelle ou un résidu spirituel dans votre <em>demeure spirituelle</em></p>
+<p><strong>Conditions</strong> Vous tenez votre <em>demeure spirituelle</em>.</p>
+<hr />
+<p>Vous purifiez un esprit en l'amadouant pour qu'il relâche son angoisse dans un hurlement cathartique final. Cela inflige des dégâts soniques à toutes les créatures dans un @Template[cone|distance:30]{cône de 9 mètres}, un jet de @Check[will|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic] contre le plus élevé entre votre DD de classe ou votre DD de sort. Si vous dépensez une volute spirituelle, cela inflige @Damage[(@actor.level)d4[sonic]|traits:area-damage]{1d4 dégâts de son} par niveau que vous possédez. Si vous dépensez un résidu spirituel, cela inflige 1d6 dégâts de son par niveau du mort-vivant intangible ou de l'apparition dont vous avez recueilli le résidu.</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: Exorcist Dedication
+PrereqFR: Dévouement : Exorciste
+-------------------------------------------------------------------------------

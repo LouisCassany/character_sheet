@@ -1,0 +1,20 @@
+Name: Garland Spell
+Nom: Sort couronne de fleurs
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>If your next action is to Cast a Spell with the fungus or plant trait, a garland of plants grows in a @Template[burst|distance:10] in the spell's range. The plants are difficult terrain and hazardous terrain, covered in your choice of thorns or poisonous vines. Any creature that moves into one of these squares or ends its turn in one takes 2d6 damage (@Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]] damage for thorns or @Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]] for vines). A creature can take this damage only once per turn. You and your familiar are immune to this damage.</p>
+<p>The plants last for 1 minute or until you cast another Garland Spell, whichever comes first.</p>
+<p>The damage increases to 3d6 at 16th level and 4d6 at 20th level.</p>
+-- Desc (fr) --
+<p>Si votre prochaine action consiste à Lancer un sort avec le trait champignon ou plante, une couronne de plantes apparaît dans une @Template[burst|distance:10]{explosion de 3 mètres}. Les plantes forment un terrain difficile et dangereux, couvert selon votre choix de lianes épineuses ou empoisonnées. Toute créature qui se déplace ou termine son tour dans une de ces cases, subit 2d6 dégâts (@Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]]{2d6 dégâts perforants} pour les épines ou @Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]]{2d6 dégâts de poison} pour les lianes empoisonnées). Une créature ne peut subir ces dégâts qu'une fois par tour. Vous et votre familier êtes immunisés à ces dégâts.</p>
+<p>Les plantes restent en place pendant 1 minute ou jusqu'à ce que vous lanciez un autre Sort couronne de fleurs, selon ce qui se produit en premier.</p>
+<p>Les dégâts passent à 3d6 au niveau 16 et à 4d6 au niveau 20.</p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: leaf order
+PrereqFR: ordre de la feuille
+-------------------------------------------------------------------------------

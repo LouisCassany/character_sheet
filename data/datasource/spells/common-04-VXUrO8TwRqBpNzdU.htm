@@ -1,0 +1,32 @@
+Name: Bloodspray Curse
+Nom: Malédiction du sang répandu
+État: libre
+
+-- Desc (en) --
+<p>You inflict a curse upon the target that causes any wound to gush blood. The target must attempt a Fortitude save.</p>
+<hr />
+<p><strong>Critical Success</strong> The target is unaffected.</p>
+<p><strong>Success</strong> For 1 minute, the first time each round that the target takes at least 10 @Damage[(floor(@item.rank/2))d6[piercing]]{piercing} or @Damage[(floor(@item.rank/2))d6[slashing]]{slashing} damage from a single Strike, it takes 2d6 additional damage of the same type.</p>
+<p><strong>Failure</strong> As success, but when it takes the additional damage, it also takes @Damage[(floor(@item.rank/2))d6[bleed]].</p>
+<hr />
+<p><strong>Heightened (+2)</strong> The additional damage increases by 1d6 and the persistent bleed damage increases by 1d6.</p>
+-- Desc (fr) --
+<p>Vous infligez à la cible une malédiction qui provoque un jaillissement de sang de toute blessure. La cible doit tenter un jet de Vigueur.</p>
+<hr />
+<p><strong>Succès critique</strong> La cible n'est pas affectée.</p>
+<p><strong>Succès</strong> Pendant 1 minute, la première fois au cours de chaque round que la cible subit au moins 10 dégâts perforants ou tranchants d'une unique Frappe, elle subit 2d6 dégâts supplémentaires du même type.</p>
+<p><strong>Échec</strong> Comme en cas de succès, mais lorsqu'elle subit les dégâts supplémentaires, elle subit aussi @Damage[(floor(@item.rank/2))d6[bleed]]{2d6 dégâts de saignement}.</p>
+<hr />
+<p><strong>Intensifié (+2)</strong> Les dégâts supplémentaires augmentent de 1d6 et les dégâts de saignement augmentent de 1d6.</p>
+-- End desc ---
+
+----- Fields ------------------------------------------------------------------
+DurationEN: varies
+DurationFR: variable
+RangeEN: 30 feet
+RangeFR: 9 mètres
+TargetEN: 1 creature
+TargetFR: 1 créature
+TimeEN: 2
+TimeFR: 2
+-------------------------------------------------------------------------------

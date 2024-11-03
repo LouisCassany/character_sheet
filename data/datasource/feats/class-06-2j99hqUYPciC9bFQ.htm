@@ -1,0 +1,25 @@
+Name: Weight Of Stone
+Nom: Poids de pierre
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>A packed cloud of thundering boulders descends from the sky, beating down everyone in its path. The rain of stone falls in a cylinder 20 feet in diameter and 80 feet high, and the bottom must be within 120 feet of you. Each creature in the area takes @Damage[(floor((@actor.level -6)/2)+4)d8[bludgeoning]|traits:area-damage] damage and might be pushed downward, depending on its @Check[reflex|against:class] save against your class DC.</p>
+<hr />
+<p><strong>Critical Success</strong> The creature is unaffected.</p>
+<p><strong>Success</strong> The creature takes half damage.</p>
+<p><strong>Failure</strong> The creature takes full damage and is pushed downward 40 feet without taking falling damage. If it reaches the bottom of the cylinder or the ground, the push ends. If the creature is pushed to the ground, it can't Fly, @UUID[Compendium.pf2e.spells-srd.Item.fI20AVwOzJMHXRdo]{Levitate}, or otherwise leave the ground for 1 round.</p>
+<p><strong>Critical Failure</strong> As failure, but double damage and the distance the creature is pushed is 80 feet.</p>
+<hr />
+<p><strong>Level (+2)</strong> The damage increases by 1d8.</p>
+-- Desc (fr) --
+<p>Un nuage de rochers tonitruants descend du ciel, frappant tous ceux qui se trouvent sur son passage. La pluie de pierres tombe dans un cylindre de 6 mètres de diamètre et de 24 mètres de hauteur dont la base doit se trouver à moins de 36 mètres de vous. Chaque créature dans la zone subit @Damage[(floor((@actor.level -6)/2)+4)d8[bludgeoning]|traits:area-damage]{4d8 dégâts contondants} et est repoussée vers le bas, en fonction de son jet de @Check[reflex|dc:resolve(@actor.attributes.classDC.value)] contre votre DD de classe.</p>
+<hr />
+<p><strong>Succès critique</strong> La créature n'est pas affectée.</p>
+<p><strong>Succès</strong> La créature subit la moitié des dégâts.</p>
+<p><strong>Échec</strong> La créature subit la totalité des dégâts et est repoussée de 12 mètres sans subir de dégâts de chute. Si elle atteint la base du cylindre ou le sol, la poussée se termine. Si la créature est poussée au sol, elle ne peut ni Voler, ni @UUID[Compendium.pf2e.spells-srd.Item.fI20AVwOzJMHXRdo]{Léviter} ni quitter le sol pendant 1 round.</p>
+<p><strong>Échec critique</strong> Comme en cas d'échec, mais doublez les dégâts et la distance sur laquelle la créature est repoussée passe à 24 mètres.</p>
+<hr />
+<p><strong>Niveau (+2)</strong> Les dégâts augmentent de 1d8.</p>
+-- End desc ---

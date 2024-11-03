@@ -1,0 +1,19 @@
+Name: Energetic Meltdown
+Nom: Effondrement énergétique
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>As you channel energy through your deviant abilities, some of it turns back on you, spiking your body temperature or dancing across your skin.</p>
+<p>@UUID[Compendium.pf2e.feat-effects.Item.0AD7BiKjT8a6Uh92]{Effect: Energetic Meltdown}</p>
+<p><strong>Mild Backlash</strong> You take [[/r @actor.level]]{damage equal to your level} as energy scours your body.</p>
+<p><strong>Moderate Backlash</strong> Energy wracks your body. After taking the damage, you gain weakness to the energy type of your backlash until your next daily preparations. The weakness is equal to one-third of your level. You also lose immunity to the energy type if you had it, until your next daily preparations.</p>
+<p><strong>Severe Backlash</strong> Whatever furnace or well within you that provides the energy for your deviation overloads completely, cascading out of you in an uncontrolled burst. You deal [[/r (@actor.level)d6]]{1d6 damage per level} to all creatures in a @Template[emanation|distance:30] with a @Check[fortitude|against:class-spell|basic] save. You automatically take full damage without attempting a save.</p>
+-- Desc (fr) --
+<p>Lorsque vous canalisez l'énergie par le biais de vos capacités déviantes, une partie de celle-ci se retourne contre vous, faisant monter votre température corporelle ou en dansant sur votre peau.</p>
+<p>@UUID[Compendium.pf2e.feat-effects.Item.0AD7BiKjT8a6Uh92]{Effet : Effondrement énergétique}</p>
+<p><strong>Contrecoup léger</strong> Vous subissez des [[/r @actor.level]]{dégâts égaux à votre niveau} lorsque l'énergie parcourt votre corps.</p>
+<p><strong>Contrecoup modéré</strong> L'énergie envahit votre corps. Après avoir subi les dégâts, Vous obtenez une faiblesse au type d'énergie de votre contrecoup jusqu'à vos prochains préparatifs quotidiens. La faiblesse est égale à un tiers de votre niveau. Vous perdez également l'immunité au type d'énergie si vous l'aviez, jusqu'à vos prochains préparatifs quotidiens.</p>
+<p><strong>Contrecoup sévère</strong> La fournaise ou le puits d'énergie qui vous fournit l'énergie nécessaire à votre déviance est complètement surchargé et se déverse hors de vous dans une explosion incontrôlée. Vous infligez [[/r (@actor.level)d6]]{1d6 dégâts par niveau} à toutes les créatures dans une @Template[emanation|distance:30]{émanation de 9 mètres} avec un jet de @Check[fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic] contre le plus élevé entre votre DD de sort ou votre DD de classe. Vous subissez automatiquement la totalité des dégâts sans effectuer de jet de sauvegarde.</p>
+-- End desc ---

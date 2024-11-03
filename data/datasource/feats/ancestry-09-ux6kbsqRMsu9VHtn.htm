@@ -1,0 +1,28 @@
+Name: Quill Spray
+Nom: Projection de piquant
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p><strong>Frequency</strong> once per day</p>
+<hr />
+<p>You can launch a mass of quills at opponents. You spray quills in a @Template[cone|distance:30], dealing 5d8 piercing damage. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic] saving throw against the higher of your class DC or spell DC. On a critical failure, a creature also takes 5 persistent bleed damage. At 11th level and every even level thereafter, the piercing damage increases by 1d8 and the persistent bleed damage increases by 1.</p>
+<p>@Damage[(ceil(@actor.level/2))d8[piercing]]{Leveled Piercing Damage}</p>
+<p>@Damage[(ceil(@actor.level/2))[bleed]]{Leveled Bleed Damage}</p>
+<hr />
+<p><em><strong>Note</strong> The feat does not specify the type of saving throw required. A reflex saving throw has been added, in line with Barbed Quills.</em></p>
+-- Desc (fr) --
+<p><strong>Fréquence</strong> Une fois par jour</p>
+<hr />
+<p>Vous pouvez lancer une salve de piquants sur vos adversaires. Vous projetez des piquants dans un cône de 9 m, infligeant [[/r 5d8[piercing]]]{5d8 dégâts perforants}. Chaque créature dans la zone doit faire un jet de @Check[reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic]{Réflexes basique contre le plus élevé entre votre DD de classe ou votre DD de sort}. En cas d'échec critique, la créature subit également [[/r 5[bleed]]]{5 dégâts de saignement}. Au niveau 11 et à chaque niveau pair suivant, les dégâts perforants augmentent de 1d8 et les dégâts de saignement augmentent de 1.</p>
+<p>[[/r ceil(@actor.level.value/2)d8 #perforants]]{Dégâts perforants selon le niveau}</p>
+<p>[[/r ceil(@actor.level.value/2)[bleed]]]{Dégâts de saignement selon le niveau}</p>
+<hr />
+<p><em><strong>Note</strong> Le don ne précise par le type de jet de sauvegarde requis. Un jet de Réflexes a été ajouté, sur la même ligne que Piquants barbelés.</em></p>
+-- End desc ---
+
+----- Lists -------------------------------------------------------------------
+PrereqEN: quillcoat shisk or quill unarmed attack
+PrereqFR: Shisk à piquants ou attaque à mains nues de piquants
+-------------------------------------------------------------------------------

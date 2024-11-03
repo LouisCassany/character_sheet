@@ -1,0 +1,25 @@
+Name: Steam Knight
+Nom: Chevalier vapeur
+État: changé
+Changés: desc
+État d'origine: libre
+
+-- Desc (en) --
+<p>You shape your kinetic aura into swirling armor of steam that scalds your enemies and propels you on super-heated jet streams. A creature can take damage from Steam Knight only once per round. Your steam armor has the following effects.</p>
+<ul>
+<li>You gain a +10-foot status bonus to your Speed.</li>
+<li>When you @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Leap}, you can jump up to your Speed. You don't immediately fall at the end of a jump, provided you Leap again with your next action. If you Leap over a creature and come within 10 feet, that creature takes @Damage[(floor((@actor.level -6)/5)+2)d6[fire]] damage with a @Check[reflex|against:kineticist|basic] save against your class DC.</li>
+<li>At the start of each of your turns, you can emit steam as a free action. It deals @Damage[(floor((@actor.level -6)/5)+2)d6[fire]] damage to each creature in your kinetic aura with a @Check[reflex|against:kineticist|basic] save against your class DC. A creature that fails is also pushed 5 feet.</li>
+</ul>
+<hr />
+<p><strong>Level (+5)</strong> The fire damage from a jump or blast of steam increases by 1d6.</p>
+-- Desc (fr) --
+<p>Vous façonnez votre aura kinétique en une armure de vapeur tourbillonnante qui ébouillante vos ennemis et vous propulse sur des jets surchauffés. Une créature ne peut subir de dégâts du Chevalier vapeur qu'une seule fois par round. Votre armure de vapeur possède les effets suivants.</p>
+<ul>
+<li>Vous obtenez un bonus de statut de +3 m à votre Vitesse.</li>
+<li>Lorsque vous @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Bondissez}, vous pouvez sauter de votre Vitesse au maximum. Vous ne chutez pas immédiatement à la fin d'un saut, pourvu que vous Bondissiez au cours de votre prochaine action. Si vous Bondissez au dessus d'une créature et arrivez dans les 3 mètres, cette créature subit @Damage[(floor((@actor.level -6)/5)+2)d6[fire]]{2d6 dégâts de feu} avec un jet de @Check[reflex|against:class|basic] contre votre DD de classe.</li>
+<li>Au début de chacun de vos tours, vous pouvez émettre de la vapeur par une action gratuite. Cela inflige @Damage[(floor((@actor.level -6)/5)+2)d6[fire]]{2d6 dégâts de feu} à chaque créature dans votre aura kinétique avec un jet de @Check[reflex|against:class|basic] contre votre DD de classe. Une créature qui obtient un échec est également repoussée de 1,50 mètre.</li>
+</ul>
+<hr />
+<p><strong>Niveau (+5)</strong> Les dégâts de feu d'un saut ou d'une explosion de vapeur augmentent de 1d6.</p>
+-- End desc ---
