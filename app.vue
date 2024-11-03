@@ -1,7 +1,7 @@
 <template>
   <div class="page p-[1rem] grid grid-cols-12 grid-rows-12 gap-6">
     <div class="col-span-3 row-span-3 flex flex-col justify-between">
-      <img src="./public/pathfinder_logo.png" />
+      <img src="/public/pathfinder_logo.png" />
       <Abilities class="bg-red-20 row-span-3 col-span-3" />
     </div>
     <Defense class="bg-green-20 row-span-3 col-span-6" />
@@ -9,7 +9,7 @@
       <span class="text-center text-4xl text-red-800 font-mono" style="font-family: 'Taroca' !important;">
         {{ character.name }}
       </span>
-      <img src="./public/monk4.webp" class="rounded-full object-contain h-52" />
+      <img src="/public/monk4.webp" class="rounded-full object-contain h-52" />
     </div>
     <Attacks class="bg-blue-20 row-span-1 col-span-12" />
     <Skills class="bg-purple-20 row-span-8 col-span-8" />
