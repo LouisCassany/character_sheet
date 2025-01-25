@@ -7,7 +7,7 @@
     <Defense class="bg-green-20 row-span-3 col-span-6" />
     <div class="col-span-3 row-span-3 flex flex-col justify-between">
       <span class="text-center text-4xl text-red-800 font-mono" style="font-family: 'Taroca' !important;">
-        {{ character.name }}
+        {{ character.nom }}
       </span>
       <img src="/public/monk4.webp" class="rounded-full object-contain h-52" />
     </div>

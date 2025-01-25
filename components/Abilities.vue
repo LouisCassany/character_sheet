@@ -10,7 +10,7 @@
             <div>
                 <div v-if="ability == 'FOR'" class="text-[0.5rem]">Valeur</div>
                 <div class="box">
-                    {{ character.abilities[ability] }}
+                    {{ character.caracteristiques[ability] }}
                 </div>
             </div>
             <div>

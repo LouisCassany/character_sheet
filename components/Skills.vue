@@ -1,28 +1,28 @@
 <template>
     <div class="w-full flex flex-col justify-between">
-        <div v-for="skill in character.skills" class="flex items-end w-full justify-between">
+        <div v-for="skill in character.competences" class="flex items-end w-full justify-between">
             <div class="w-[200px] boxPrimary">
-                {{ skill.name }}
+                {{ skill.nom }}
             </div>
             <div>
-                <Box :label="skill.name == 'Acrobaties' ? 'Total' : ''"
-                    :value="getAbilityModifier(skill.ability) + getProficiencyBonus(skill.proficiency) + skill.bonus" />
+                <Box :label="skill.nom == 'Acrobaties' ? 'Total' : ''"
+                    :value="getAbilityModifier(skill.carac) + getProficiencyBonus(skill.maitrise) + skill.bonus_divers" />
             </div>
             <span>
                 =
             </span>
             <span class="w-[30px]">
-                {{ skill.ability }}
+                {{ skill.carac }}
             </span>
             <div>
-                <Box :label="skill.name == 'Acrobaties' ? 'Carac.' : ''" :value="getAbilityModifier(skill.ability)">
+                <Box :label="skill.nom == 'Acrobaties' ? 'Carac.' : ''" :value="getAbilityModifier(skill.carac)">
                 </Box>
             </div>
-            <BoxProficiency :hideLabel="skill.name != 'Acrobaties'" :proficiency="skill.proficiency" />
+            <BoxProficiency :hideLabel="skill.nom != 'Acrobaties'" :proficiency="skill.maitrise" />
             <span>
                 +
             </span>
-            <Box :label="skill.name == 'Acrobaties' ? 'Divers.' : ''" :value="skill.bonus"></Box>
+            <Box :label="skill.nom == 'Acrobaties' ? 'Divers.' : ''" :value="skill.bonus_divers"></Box>
         </div>
     </div>
 </template>

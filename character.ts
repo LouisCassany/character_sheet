@@ -4,66 +4,77 @@ export const ability = ["FOR", "DEX", "CON", "SAG", "INT", "CHA"] as const;
 export type Ability = typeof ability[number];
 
 type Character = {
-    name: string
-    ancestry: string
-    background: string
-    class: string
-    level: number
-    health: number
-    languages: string
-    size: string
+    nom: string
+    heritage: {
+        nom: string
+        pv_par_niveau: number
+    }
+    historique: string
+    classe: {
+        nom: string
+        pv_initiaux: number
+    }
+    niveau: number
+    langues: string[]
+    taille: string
     alignement: string
-    speed: number
-    inventory: string[]
-    abilities: {
+    vitesse: number
+    inventaire: string[]
+    caracteristiques: {
         [key in Ability]: number
     }
-    CA: {
-        armor: string
-        CABonus: number
-        maxDex: number
-        proficiency: Proficiency
-        bonus: number
+    armure: {
+        nom: string
+        puissance_armure: number
+        resillience_armure: number
+        max_dex: number
+        maitrise: Proficiency
+        bonus_divers: number
     },
-    saves: {
+    jds: {
         [key: string]: {
-            name: string
-            proficiency: Proficiency
-            ability: Ability
-            bonus: number
+            nom: string
+            maitrise: Proficiency
+            carac: Ability
+            bonus_divers: number
         }
     },
-    attacks: {
-        name: string,
-        ability: "FOR" | "DEX" | "CON" | "SAG" | "INT" | "CHA",
-        dices: string,
-        damageBonus: number,
-        attackBonus: number,
-        proficiency: "I" | "Q" | "E" | "M" | "L",
+    attaques: {
+        nom: string,
+        carac: "FOR" | "DEX" | "CON" | "SAG" | "INT" | "CHA",
+        des: string,
+        bonus_degats: number,
+        bonus_attaque: number,
+        maitrise: "I" | "Q" | "E" | "M" | "L",
         traits: string[]
     }[],
-    skills: {
+    competences: {
         [key: string]: {
-            name: string
-            ability: Ability
-            bonus: number
-            proficiency: Proficiency
+            nom: string
+            carac: Ability
+            bonus_divers: number
+            maitrise: Proficiency
         }
     }
 }
 
 export const character = ref<Character>({
-    name: "Flinch",
-    ancestry: "Humain",
-    background: "Barbier",
-    class: "Moine",
-    level: 10,
-    health: 126,
-    languages: "commun.",
-    size: "M",
+    nom: "Flinch",
+    heritage: {
+        nom: "Humain",
+        pv_par_niveau: 8,
+    },
+    historique: "Barbier",
+    classe: {
+        nom: "Moine",
+        pv_initiaux: 10,
+    },
+    niveau: 10,
+    langues: ["commun"],
+    taille: "M",
     alignement: "CN",
-    speed: 12,
-    abilities: {
+    vitesse: 12,
+    caracteristiques: {
         FOR: 16,
         DEX: 20,
         CON: 16,
@@ -71,171 +82,172 @@ export const character = ref<Character>({
         INT: 10,
         CHA: 19
     },
-    inventory: ["Cape elfique", "Bottes elfiques", "Anneau de mensonge"],
-    CA: {
-        armor: "Vêtements d'aventurier +1",
-        CABonus: 0,
-        maxDex: 4,
-        proficiency: "E",
-        bonus: 1,
+    inventaire: ["Cape elfique", "Bottes elfiques", "Anneau de mensonge"],
+    armure: {
+        nom: "Vêtements d'explorateurs",
+        puissance_armure: 1,
+        resillience_armure: 1,
+        max_dex: 5,
+        maitrise: "E",
+        bonus_divers: 0,
     },
-    saves: {
-        reflex: {
-            name: "Réflexe",
-            proficiency: "E",
-            ability: "DEX",
-            bonus: 1,
+    jds: {
+        reflexe: {
+            nom: "Réflexe",
+            maitrise: "E",
+            carac: "DEX",
+            bonus_divers: 1,
         },
-        fortitude: {
-            name: "Vigueur",
-            proficiency: "E",
-            ability: "CON",
-            bonus: 1,
+        vigueur: {
+            nom: "Vigueur",
+            maitrise: "E",
+            carac: "CON",
+            bonus_divers: 1,
         },
-        will: {
-            name: "Volonté",
-            proficiency: "M",
-            ability: "SAG",
-            bonus: 1,
+        volontee: {
+            nom: "Volonté",
+            maitrise: "M",
+            carac: "SAG",
+            bonus_divers: 1,
         }
     },
-    attacks: [
+    attaques: [
         {
-            name: "Bandellettes de coup puissants +1",
-            ability: "DEX",
-            dices: "2d8 + 2d6 + 4",
-            damageBonus: 0,
-            attackBonus: 1,
-            proficiency: "E",
+            nom: "Bandellettes de coup puissants +2",
+            carac: "DEX",
+            des: "2d8 + 2d6 + 5(6)",
+            bonus_degats: 0,
+            bonus_attaque: 2,
+            maitrise: "E",
             traits: ["Agile", "Finesse", "Traître", "Magique", "Sonique", "poison", "Fer froid & argent"]
         },
     ],
-    skills: {
+    competences: {
         acrobatie: {
-            name: "Acrobaties",
-            ability: "DEX",
-            bonus: 1,
-            proficiency: "Q",
+            nom: "Acrobaties",
+            carac: "DEX",
+            bonus_divers: 1,
+            maitrise: "Q",
         },
         arcanes: {
-            name: "Arcanes",
-            ability: "INT",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Arcanes",
+            carac: "INT",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         artisanat: {
-            name: "Artisanat",
-            ability: "INT",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Artisanat",
+            carac: "INT",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         athletisme: {
-            name: "Athletisme",
-            ability: "FOR",
-            bonus: 0,
-            proficiency: "Q",
+            nom: "Athletisme",
+            carac: "FOR",
+            bonus_divers: 0,
+            maitrise: "Q",
         },
         diplomatie: {
-            name: "Diplomatie",
-            ability: "CHA",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Diplomatie",
+            carac: "CHA",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         discretion: {
-            name: "Discrétion",
-            ability: "DEX",
-            bonus: 1,
-            proficiency: "Q",
+            nom: "Discrétion",
+            carac: "DEX",
+            bonus_divers: 1,
+            maitrise: "Q",
         },
         duperie: {
-            name: "Duperie",
-            ability: "CHA",
-            bonus: 2,
-            proficiency: "M",
+            nom: "Duperie",
+            carac: "CHA",
+            bonus_divers: 2,
+            maitrise: "M",
         },
         intimidation: {
-            name: "Intimidation",
-            ability: "CHA",
-            bonus: 0,
-            proficiency: "Q",
+            nom: "Intimidation",
+            carac: "CHA",
+            bonus_divers: 0,
+            maitrise: "Q",
         },
         conn_chirurgie: {
-            name: "Conn. chirurgie",
-            ability: "INT",
-            bonus: 0,
-            proficiency: "Q",
+            nom: "Conn. chirurgie",
+            carac: "INT",
+            bonus_divers: 0,
+            maitrise: "Q",
         },
         medecine: {
-            name: "Médecine",
-            ability: "SAG",
-            bonus: 1,
-            proficiency: "E",
+            nom: "Médecine",
+            carac: "SAG",
+            bonus_divers: 1,
+            maitrise: "E",
         },
         nature: {
-            name: "Nature",
-            ability: "SAG",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Nature",
+            carac: "SAG",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         occultisme: {
-            name: "Occultisme",
-            ability: "INT",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Occultisme",
+            carac: "INT",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         perception: {
-            name: "Perception",
-            ability: "SAG",
-            bonus: 0,
-            proficiency: "E",
+            nom: "Perception",
+            carac: "SAG",
+            bonus_divers: 0,
+            maitrise: "E",
         },
         religion: {
-            name: "Religion",
-            ability: "SAG",
-            bonus: 0,
-            proficiency: "Q",
+            nom: "Religion",
+            carac: "SAG",
+            bonus_divers: 0,
+            maitrise: "Q",
         },
         representation: {
-            name: "Représentation",
-            ability: "CHA",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Représentation",
+            carac: "CHA",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         societe: {
-            name: "Société",
-            ability: "INT",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Société",
+            carac: "INT",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         survie: {
-            name: "Survie",
-            ability: "SAG",
-            bonus: 0,
-            proficiency: "I",
+            nom: "Survie",
+            carac: "SAG",
+            bonus_divers: 0,
+            maitrise: "I",
         },
         vol: {
-            name: "Vol",
-            ability: "DEX",
-            bonus: 0,
-            proficiency: "E",
+            nom: "Vol",
+            carac: "DEX",
+            bonus_divers: 0,
+            maitrise: "E",
         },
     },
 })
 
 export function getAbilityModifier(ability: Ability) {
-    return Math.floor((character.value.abilities[ability] - 10) / 2)
+    return Math.floor((character.value.caracteristiques[ability] - 10) / 2)
 }
 
 export function getProficiencyBonus(prof: Proficiency) {
     switch (prof) {
         case "Q":
-            return 2 + character.value.level
+            return 2 + character.value.niveau
         case "E":
-            return 4 + character.value.level
+            return 4 + character.value.niveau
         case "M":
-            return 6 + character.value.level
+            return 6 + character.value.niveau
         case "L":
-            return 8 + character.value.level
+            return 8 + character.value.niveau
         default:
             return 0
     }

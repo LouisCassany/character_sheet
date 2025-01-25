@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-col w-full">
-        <div class="flex flex-col gap-3" v-for="attack in character.attacks">
+        <div class="flex flex-col gap-3" v-for="attack in character.attaques">
             <div class="flex items-end gap-1">
-                <span class="boxPrimary p-3">{{ attack.name }}</span>
+                <span class="boxPrimary p-3">{{ attack.nom }}</span>
                 <Box label="Total" :value="getAttackBonus(attack)" /> =
-                <Box label="Carac." :value="getAbilityModifier(attack.ability)" /> +
-                <BoxProficiency :proficiency="attack.proficiency" /> +
-                <Box label="Bonus" :value="attack.attackBonus" />
+                <Box label="Carac." :value="getAbilityModifier(attack.carac)" /> +
+                <BoxProficiency :proficiency="attack.maitrise" /> +
+                <Box label="Bonus" :value="attack.bonus_attaque" />
                 <span class="rounded-full whitespace-nowrap px-2 ml-6 bg-primary text-white">
-                    {{ attack.dices }}
+                    {{ attack.des }}
                 </span>
             </div>
             <div class="flex w-full gap-2">
@@ -24,6 +24,6 @@
 import { character, getAbilityModifier, getProficiencyBonus } from "../character";
 
 function getAttackBonus(attack: any) {
-    return attack.attackBonus + getAbilityModifier(attack.ability) + getProficiencyBonus(attack.proficiency)
+    return attack.bonus_attaque + getAbilityModifier(attack.carac) + getProficiencyBonus(attack.maitrise)
 }
 </script>

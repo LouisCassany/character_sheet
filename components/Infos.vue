@@ -1,15 +1,15 @@
 <template>
     <div class="flex flex-col gap-1">
-        <span>Niveau : {{ character.level }}</span>
-        <span>Héritage : {{ character.ancestry }}</span>
-        <span>Classe : {{ character.class }}</span>
-        <span>Taille : {{ character.size }}</span>
-        <span>Vitesse : {{ character.speed }}</span>
+        <span>Niveau : {{ character.niveau }}</span>
+        <span>Héritage : {{ character.heritage.nom }}</span>
+        <span>Classe : {{ character.classe.nom }}</span>
+        <span>Taille : {{ character.taille }}</span>
+        <span>Vitesse : {{ character.vitesse }}</span>
         <span>Alignement : {{ character.alignement }}</span>
-        <span>Langues : {{ character.languages }}</span>
+        <span>Langues : {{ character.langues.join(", ") }}</span>
         <div class="h-full bg-primary bg-opacity-10">
             <span class="boxPrimary">Inventaire</span>
-            <div v-for="item in character.inventory" :key="item" class="p-1">
+            <div v-for="item in character.inventaire" :key="item" class="p-1">
                 <span class="text-center font-bold">{{ item }}</span>
             </div>
         </div>
